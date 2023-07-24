@@ -1,4 +1,4 @@
-cp shipping.sh /etc/systemd/system/shipping.service
+cp shipping.service /etc/systemd/system/shipping.service
 yum install maven -y
 useradd roboshop
 mkdir /app 
