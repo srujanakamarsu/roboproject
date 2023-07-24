@@ -13,6 +13,9 @@ yum install nodejs -y >/tmp/roboshop.log
 echo -e  "\e[36m>>>>>> create application user <<<<<<\e[0m"
 useradd roboshop >/tmp/roboshop.log
 
+echo -e  "\e[36m>>>>>> delete application directory <<<<<<\e[0m"
+rm -rf /app >/tmp/roboshop.log
+
 echo -e  "\e[36m>>>>>> create application directory <<<<<<\e[0m"
 mkdir /app >/tmp/roboshop.log
 
@@ -20,9 +23,9 @@ echo -e  "\e[36m>>>>>> download application content <<<<<<\e[0m"
 curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip >/tmp/roboshop.log
 
 echo -e  "\e[36m>>>>>> extract application content <<<<<<\e[0m"
-cd /app >/tmp/roboshop.log
+cd /app 
 unzip /tmp/catalogue.zip >/tmp/roboshop.log
-cd /app >/tmp/roboshop.log
+cd /app 
 
 echo -e  "\e[36m>>>>>> download nodejs dependencies <<<<<<\e[0m"
 npm install >/tmp/roboshop.log
