@@ -1,4 +1,4 @@
-greeeting()
+greeting()
 {
     echo this is my 1st function
     echo hi
